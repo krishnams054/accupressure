@@ -204,7 +204,7 @@ function initTreatments(config) {
 
   if (!grid || !config.treatments) return;
 
-  let isExpanded = true;
+  let isExpanded = false;
 
   // Render Treatment Cards
   function renderTreatments(filter = "all") {
@@ -216,8 +216,8 @@ function initTreatments(config) {
       if (filter === "all") {
         toggleBtn.style.display = "inline-block";
         if (!isExpanded) {
-          items = items.slice(0, 4);
-          toggleBtn.textContent = "Show All Services";
+          items = items.slice(0, 3);
+          toggleBtn.textContent = "Show More";
         } else {
           toggleBtn.textContent = "Show Less";
         }
